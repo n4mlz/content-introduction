@@ -12,7 +12,13 @@ const tweets: string[] = [
   'https://twitter.com/Nameless_itf/status/1724342257258803326',
   'https://twitter.com/Nameless_itf/status/1724342259062301112',
   'https://twitter.com/Nameless_itf/status/1724342260819742909',
-  'https://twitter.com/Nameless_itf/status/1724355584093495768'
+  'https://twitter.com/Nameless_itf/status/1724355584093495768',
+  'https://twitter.com/Nameless_itf/status/1724365041896739241',
+  'https://twitter.com/Nameless_itf/status/1724371079534399623',
+  'https://twitter.com/Nameless_itf/status/1724371173344162274',
+  'https://twitter.com/Nameless_itf/status/1724372013576560807',
+  'https://twitter.com/Nameless_itf/status/1724430685421625670',
+  'https://twitter.com/Nameless_itf/status/1724432862303179007'
 ];
 
 const pr = new Intl.PluralRules("en-US", { type: "ordinal" });
