@@ -1,0 +1,62 @@
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin: 30px;
+  font-family:'Nunito', 'Kiwi Maru', sans-serif;
+}
+
+.tweets {
+  -webkit-column-count: 3;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 3;
+  /* Firefox */
+  column-count: 3;
+  -webkit-column-gap: .5rem;
+  /* Chrome, Safari, Opera */
+  -moz-column-gap: .5rem;
+  /* Firefox */
+  column-gap: .5rem;
+
+}
+
+.tweet {
+  width: calc(100% / 1);
+  text-align: center;
+}
+
+.tweet p {
+  margin: 20px;
+  font-size: large;
+  font-weight: 700;
+  font-family:'Nunito', 'Kiwi Maru', sans-serif;
+}
+
+.gradation {
+  display: inline-block;
+  color: transparent;
+  background: repeating-linear-gradient(90deg, #ff6efa 0% 10%, #8770da 30% 33%, #6582f5 57% 60%, #6fd9de 90% 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@media screen and (max-width: 1000px) {
+  .tweets {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .tweets {
+    -webkit-column-count: 1;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 1;
+    /* Firefox */
+    column-count: 1;
+  }
+}
