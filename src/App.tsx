@@ -15,16 +15,18 @@ const tweets: string[] = [
   'https://twitter.com/Nameless_itf/status/1724355584093495768'
 ];
 
-function indicator(i: number) {
-  i = Math.abs(i);
-  var cent = i % 100;
-  if (cent >= 10 && cent <= 20) return i + 'th';
-  var dec = i % 10;
-  if (dec === 1) return i + 'st';
-  if (dec === 2) return i + 'nd';
-  if (dec === 3) return i + 'rd';
-  return i + 'th';
-}
+const pr = new Intl.PluralRules("en-US", { type: "ordinal" });
+const suffixes = new Map([
+  ["one", "st"],
+  ["two", "nd"],
+  ["few", "rd"],
+  ["other", "th"],
+]);
+const formatOrdinals = (n: number) => {
+  const rule = pr.select(n);
+  const suffix = suffixes.get(rule);
+  return `${n}${suffix}`;
+};
 
 const Header: React.FC = () => {
   return (
@@ -37,14 +39,13 @@ const Header: React.FC = () => {
 const Tweet: React.FC<{ url: string, num: number }> = (props) => {
   return (
     <div className='tweet'>
-      <p className='number gradation'>{indicator(props.num + 1)} tweet</p>
+      <p className='number gradation'>{formatOrdinals(props.num + 1)} tweet</p>
       <blockquote className='twitter-tweet'><a href={props.url} /></blockquote>
     </div>
   )
 }
 
 const Tweets: React.FC = () => {
-
   return (
     <div className='tweets'>
       {tweets.map((tweet, index) => <Tweet url={tweet} num={index} key={index} />)}
