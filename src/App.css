@@ -2,9 +2,13 @@ header {
   text-align: center;
 }
 
-header h1 {
+header h1, p {
   margin: 30px;
   font-family:'Nunito', 'Kiwi Maru', sans-serif;
+}
+
+header p {
+  margin: 0 30px 30px 30px;
 }
 
 .tweets {
