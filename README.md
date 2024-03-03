@@ -13,7 +13,7 @@
 
 ページは以下にて公開しています。ツイートの読み込みに時間がかかるので、ツイートが表示されない場合はそのまま待ってみてください。
 
-https://nameless-itf23.github.io/content-introduction/
+https://n4mlz.github.io/content-introduction/
 
 ## その他
 
